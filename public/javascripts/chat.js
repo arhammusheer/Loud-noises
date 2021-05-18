@@ -4,7 +4,16 @@ let messageBox = document.getElementById("message-box");
 let messageBtn = document.getElementById("message-button");
 let messageLog = document.getElementById("message-log");
 let bigRedButton = document.getElementById("big-red-button");
-let loudNoises = new Audio("/audio/loud-noises.mp3");
+
+let interaction = false;
+let loudNoises = new Audio();
+
+window.onclick = () => {
+  if (!interaction) loudNoises.play();
+  interaction = true;
+  loudNoises.src = "/audio/loud-noises.mp3";
+  bigRedButton.innerHTML = "BIG RED BUTTON"
+};
 
 const socket = io();
 socket.on("connect", () => {
