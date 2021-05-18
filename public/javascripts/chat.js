@@ -10,9 +10,11 @@ let interaction = false;
 let audioPlayer = new Audio();
 
 audios = {
+  "anime-wow":"/audio/anime-wow.mp3",
   "bitch-gimme-attention": "/audio/bitch-gimme-attention.mp3",
   bruh: "/audio/bruh.mp3",
   "discord-notification": "/audio/discord-notification.mp3",
+  "goat-scream":"/audio/goat-scream.mp3",
   "loud-noises": "/audio/loud-noises.mp3",
   sheeesh: "/audio/sheeesh.mp3",
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
