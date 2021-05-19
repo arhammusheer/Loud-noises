@@ -10,15 +10,6 @@ let stopButton = document.getElementById("stop-button");
 let interaction = false;
 let audioPlayer = new Audio();
 
-socket.on("audios", (audios)=>{
-  for (audio in audios) {
-    newAudio = document.createElement("option");
-    newAudio.value = audios[audio];
-    newAudio.innerHTML = audio;
-    audioList.appendChild(newAudio);
-  }
-})
-
 window.onclick = () => {
   if (!interaction) {
     audioPlayer.play();
@@ -31,6 +22,15 @@ window.onclick = () => {
 const socket = io();
 socket.on("connect", () => {
   console.log(socket.id);
+});
+
+socket.on("audios", (audios) => {
+  for (audio in audios) {
+    newAudio = document.createElement("option");
+    newAudio.value = audios[audio];
+    newAudio.innerHTML = audio;
+    audioList.appendChild(newAudio);
+  }
 });
 
 socket.emit("room", room);
