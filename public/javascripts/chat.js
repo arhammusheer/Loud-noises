@@ -15,7 +15,10 @@ audios = {
   "bitch-gimme-attention": "/audio/bitch-gimme-attention.mp3",
   bruh: "/audio/bruh.mp3",
   "discord-notification": "/audio/discord-notification.mp3",
+  "epic-choir": "/audio/epic-choir.mp3",
+  "elevator-music": "/audio/elevator-music.mp3",
   "goat-scream": "/audio/goat-scream.mp3",
+  "heavenly-music": "/audio/heavenly-music.mp3",
   "i-lo-youu": "/audio/i-lo-youu.mp3",
   "loud-noises": "/audio/loud-noises.mp3",
   "love-moment": "/audio/love-moment.mp3",
@@ -25,6 +28,7 @@ audios = {
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
   "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
   "why-you-bully-me": "/audio/why-you-bully-me.mp3",
+  "you-know": "/audio/you-know.mp3",
 };
 
 for (audio in audios) {
