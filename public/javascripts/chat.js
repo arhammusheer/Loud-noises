@@ -13,6 +13,7 @@ let audioPlayer = new Audio();
 audios = {
   "anime-wow": "/audio/anime-wow.mp3",
   "bitch-gimme-attention": "/audio/bitch-gimme-attention.mp3",
+  bonk: "/audio/bonk.mp3",
   bruh: "/audio/bruh.mp3",
   "discord-notification": "/audio/discord-notification.mp3",
   "epic-choir": "/audio/epic-choir.mp3",
@@ -28,6 +29,7 @@ audios = {
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
   "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
   "why-you-bully-me": "/audio/why-you-bully-me.mp3",
+  yeet: "/audio/yeet.mp3",
   "you-know": "/audio/you-know.mp3",
 };
 
