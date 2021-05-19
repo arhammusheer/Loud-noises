@@ -73,7 +73,7 @@ socket.on("big red button", (data) => {
 });
 
 messageBtn.onclick = () => {
-  message(messageBox.value);
+  message(messageBox.value.trim());
   messageBox.value = "";
 };
 
@@ -82,6 +82,10 @@ messageBox.addEventListener("keyup", (e) => {
     e.preventDefault();
     messageBtn.click();
   }
+});
+
+document.addEventListener("keydown", (event) => {
+  messageBox.focus();
 });
 
 stopButton.onclick = () => {
@@ -99,8 +103,10 @@ bigRedButton.onclick = () => {
 };
 
 function message(msg) {
-  socket.emit("text message", msg);
-  sentMessage(msg);
+  if (msg) {
+    socket.emit("text message", msg);
+    sentMessage(msg);
+  }
 }
 
 function receivedMessage(msg) {
