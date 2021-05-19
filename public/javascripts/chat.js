@@ -5,7 +5,7 @@ let messageBtn = document.getElementById("message-button");
 let messageLog = document.getElementById("message-log");
 let bigRedButton = document.getElementById("big-red-button");
 let audioList = document.getElementById("audio-list");
-let stopButton = document.getElementById("stop-button")
+let stopButton = document.getElementById("stop-button");
 
 let interaction = false;
 let audioPlayer = new Audio();
@@ -55,6 +55,8 @@ socket.on("text message", (msg) => {
   console.log(msg);
 });
 
+socket.on("member count", (data) => console.log(data));
+
 audioPlayer.addEventListener("canplay", () => {
   bigRedButton.disabled = false;
 });
@@ -82,9 +84,9 @@ messageBox.addEventListener("keyup", (e) => {
   }
 });
 
-stopButton.onclick = ()=>{
-  audioPlayer.pause()
-}
+stopButton.onclick = () => {
+  audioPlayer.pause();
+};
 
 bigRedButton.onclick = () => {
   socket.emit("big red button", {

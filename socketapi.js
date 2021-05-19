@@ -18,10 +18,10 @@ io.on("connection", function (socket) {
     socket.to(socket.room).emit("text message", msg);
   });
 
-  socket.on("big red button", (msg)=>{
-    console.log(`BIG RED BUTTON IS PRESSED IN ${socket.room}`)
-    socket.to(socket.room).emit("big red button",msg)
-  })
+  socket.on("big red button", (msg) => {
+    console.log(`BIG RED BUTTON IS PRESSED IN ${socket.room}`);
+    socket.to(socket.room).emit("big red button", msg);
+  });
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
