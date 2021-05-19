@@ -10,35 +10,14 @@ let stopButton = document.getElementById("stop-button");
 let interaction = false;
 let audioPlayer = new Audio();
 
-audios = {
-  "anime-wow": "/audio/anime-wow.mp3",
-  "bitch-gimme-attention": "/audio/bitch-gimme-attention.mp3",
-  bonk: "/audio/bonk.mp3",
-  bruh: "/audio/bruh.mp3",
-  "discord-notification": "/audio/discord-notification.mp3",
-  "epic-choir": "/audio/epic-choir.mp3",
-  "elevator-music": "/audio/elevator-music.mp3",
-  "goat-scream": "/audio/goat-scream.mp3",
-  "heavenly-music": "/audio/heavenly-music.mp3",
-  "i-lo-youu": "/audio/i-lo-youu.mp3",
-  "loud-noises": "/audio/loud-noises.mp3",
-  "love-moment": "/audio/love-moment.mp3",
-  naniii: "/audio/naniii.mp3",
-  rickroll: "/audio/rickroll.mp3",
-  sheeesh: "/audio/sheeesh.mp3",
-  "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
-  "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
-  "why-you-bully-me": "/audio/why-you-bully-me.mp3",
-  yeet: "/audio/yeet.mp3",
-  "you-know": "/audio/you-know.mp3",
-};
-
-for (audio in audios) {
-  newAudio = document.createElement("option");
-  newAudio.value = audios[audio];
-  newAudio.innerHTML = audio;
-  audioList.appendChild(newAudio);
-}
+socket.on("audios", (audios)=>{
+  for (audio in audios) {
+    newAudio = document.createElement("option");
+    newAudio.value = audios[audio];
+    newAudio.innerHTML = audio;
+    audioList.appendChild(newAudio);
+  }
+})
 
 window.onclick = () => {
   if (!interaction) {
