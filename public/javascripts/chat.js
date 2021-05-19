@@ -15,6 +15,7 @@ audios = {
   bruh: "/audio/bruh.mp3",
   "discord-notification": "/audio/discord-notification.mp3",
   "goat-scream":"/audio/goat-scream.mp3",
+  "i-lo-youu":"/audio/i-lo-youu.mp3",
   "loud-noises": "/audio/loud-noises.mp3",
   "love-moment": "/audio/love-moment.mp3",
   "naniii":"/audio/naniii.mp3",
