@@ -5,6 +5,7 @@ let messageBtn = document.getElementById("message-button");
 let messageLog = document.getElementById("message-log");
 let bigRedButton = document.getElementById("big-red-button");
 let audioList = document.getElementById("audio-list");
+let stopButton = document.getElementById("stop-button")
 
 let interaction = false;
 let audioPlayer = new Audio();
@@ -80,6 +81,10 @@ messageBox.addEventListener("keyup", (e) => {
     messageBtn.click();
   }
 });
+
+stopButton.onclick = ()=>{
+  audioPlayer.pause()
+}
 
 bigRedButton.onclick = () => {
   socket.emit("big red button", {
