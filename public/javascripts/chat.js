@@ -10,16 +10,16 @@ let interaction = false;
 let audioPlayer = new Audio();
 
 audios = {
-  "anime-wow":"/audio/anime-wow.mp3",
+  "anime-wow": "/audio/anime-wow.mp3",
   "bitch-gimme-attention": "/audio/bitch-gimme-attention.mp3",
   bruh: "/audio/bruh.mp3",
   "discord-notification": "/audio/discord-notification.mp3",
-  "goat-scream":"/audio/goat-scream.mp3",
-  "i-lo-youu":"/audio/i-lo-youu.mp3",
+  "goat-scream": "/audio/goat-scream.mp3",
+  "i-lo-youu": "/audio/i-lo-youu.mp3",
   "loud-noises": "/audio/loud-noises.mp3",
   "love-moment": "/audio/love-moment.mp3",
-  "naniii":"/audio/naniii.mp3",
-  "rickroll":"/audio/rickroll.mp3",
+  naniii: "/audio/naniii.mp3",
+  rickroll: "/audio/rickroll.mp3",
   sheeesh: "/audio/sheeesh.mp3",
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
   "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
@@ -34,10 +34,12 @@ for (audio in audios) {
 }
 
 window.onclick = () => {
-  if (!interaction) audioPlayer.play();
-  interaction = true;
-  audioPlayer.src = audioList.options[audioList.selectedIndex].value;
-  bigRedButton.innerHTML = "BIG RED BUTTON";
+  if (!interaction) {
+    audioPlayer.play();
+    interaction = true;
+    audioPlayer.src = audioList.options[audioList.selectedIndex].value;
+    bigRedButton.innerHTML = "BIG RED BUTTON";
+  }
 };
 
 const socket = io();
