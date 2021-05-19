@@ -19,6 +19,7 @@ audios = {
   "loud-noises": "/audio/loud-noises.mp3",
   "love-moment": "/audio/love-moment.mp3",
   "naniii":"/audio/naniii.mp3",
+  "rickroll":"/audio/rickroll.mp3",
   sheeesh: "/audio/sheeesh.mp3",
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
   "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
