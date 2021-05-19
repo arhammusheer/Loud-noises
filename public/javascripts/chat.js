@@ -16,6 +16,7 @@ audios = {
   "discord-notification": "/audio/discord-notification.mp3",
   "goat-scream":"/audio/goat-scream.mp3",
   "loud-noises": "/audio/loud-noises.mp3",
+  "naniii":"/audio/naniii.mp3",
   sheeesh: "/audio/sheeesh.mp3",
   "where-is-my-supersuit": "/audio/where-is-my-supersuit.mp3",
   "why-are-you-runnin": "/audio/why-are-you-runnin.mp3",
