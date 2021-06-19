@@ -15,7 +15,7 @@ window.onclick = () => {
     audioPlayer.play();
     interaction = true;
     audioPlayer.src = audioList.options[audioList.selectedIndex].value;
-    bigRedButton.innerHTML = "BIG RED BUTTON";
+    bigRedButton.innerHTML = "<b>BIG RED BUTTON</b>";
   }
 };
 
