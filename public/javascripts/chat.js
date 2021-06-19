@@ -6,7 +6,7 @@ let messageLog = document.getElementById("message-log");
 let bigRedButton = document.getElementById("big-red-button");
 let audioList = document.getElementById("audio-list");
 let stopButton = document.getElementById("stop-button");
-
+let roomCount = document.getElementById("room-count");
 let interaction = false;
 let audioPlayer = new Audio();
 
@@ -38,6 +38,10 @@ socket.emit("room", room);
 socket.on("text message", (msg) => {
   receivedMessage(msg);
   console.log(msg);
+});
+
+socket.on("room count", (room_count) => {
+  roomCount.innerHTML = room_count;
 });
 
 socket.on("member count", (data) => console.log(data));
